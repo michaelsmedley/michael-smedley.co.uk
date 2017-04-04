@@ -1,4 +1,7 @@
+@import "../../../node_modules/foundation-sites/scss/foundation";
 @import "vars";
+
+@include foundation-everything(true);
 
 body {
     background: $white;

@@ -1,9 +1,5 @@
-(function(){
-    "use strict";
+var myApp = angular.module('_michaelsmedleycouk',['ngRoute','ngAnimate']);
 
-    const _hereisareallylongname = 0;
+myApp.run(["$rootScope","$http",function($rootScope,$http) {
 
-    _hereisareallylongname = _hereisareallylongname+1;
-
-    alert(_hereisareallylongname);
-})();
+}]);

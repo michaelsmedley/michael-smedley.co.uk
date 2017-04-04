@@ -25,9 +25,18 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      my_target: {
+      angular: {
         files: {
-          'www/assets/js/app.min.js': ['app/assets/js/app/*.js']
+          'www/assets/js/angular.min.js': [
+          'node_modules/angular/angular.min.js',
+          'node_modules/angular-animate/angular-animate.min.js',
+          'node_modules/angular-route/angular-route.min.js',
+          ]
+        }
+      },
+      app: {
+        files: {
+          'www/assets/js/app.min.js': ['app/assets/js/app/*.js', 'app/components/*/*.js', 'app/shared/*/*.js']
         }
       }
     },
