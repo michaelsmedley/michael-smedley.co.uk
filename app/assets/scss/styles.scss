@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import "../../../node_modules/foundation-sites/scss/foundation";
 @import "vars";
 
 @include foundation-everything(true);
 
 body {
-    background: $white;
-    color: $red;
+    background: $bodybg;
+    color: $bodycolor;
+    font-family: $bodyfont;
+}
+
+nav{
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-family: $bodyfont;
+    font-weight: 700;
 }
