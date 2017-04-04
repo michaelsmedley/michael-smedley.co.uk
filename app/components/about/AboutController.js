@@ -1,6 +1,6 @@
-myApp.controller("AboutController", ["$scope", "$routeParams", function($scope, $routeParams) {
+myApp.controller("AboutController", ["$scope", "$routeParams", "$rootScope", function($scope, $routeParams,$rootScope) {
      $scope.name = 'AboutController';
      $scope.params = $routeParams;
 
-     $scope.metaDesc = "here is the meta for the about page";
+     $rootScope.metaDesc = "here is the meta for the about page";
 }]);

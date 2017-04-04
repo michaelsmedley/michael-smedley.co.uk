@@ -1,3 +1,3 @@
-myApp.controller("IndexController", ["$scope", "$route", "$routeParams","$location","$http","$rootScope","$timeout", function($scope, $route, $routeParams, $location,$http,$rootScope,$timeout) {
-
+myApp.controller("IndexController", ["$scope", "$routeParams", "$rootScope", function($scope, $routeParams,$rootScope) {
+    $rootScope.metaDesc = "This is the home page";
 }]);
