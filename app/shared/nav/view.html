@@ -1,4 +1,5 @@
 <header class="row align-middle">
+
     <div class="columns small-12 medium-6 text-center medium-text-left">
         <a href="/mysite17/" class="logo">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="51px" height="21px" viewBox="0 0 62.531 25.128" enable-background="new 0 0 62.531 25.128" xml:space="preserve">
@@ -15,8 +16,7 @@
     </div>
     <nav class="text-right hide-for-small-only columns medium-6">
     <ul class="marginless">   
-        <li ng-repeat="i in nav"><a href="{{i.link}}" class="text-color text-upper">{{i.name}}</a></li>
+        <li ng-repeat="i in nav"><a href="{{i.link}}" class="text-color text-upper" ng-class="{active: $location.path() === i.link}">{{i.name}}</a></li>
     </ul>
     </nav>
-    {{$location.path()}}
 </header>  
