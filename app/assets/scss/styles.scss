@@ -34,11 +34,18 @@ a{
         &:hover {
             color: $linkcolor;
         }
+
+        &.active {
+            color: $linkcolor;
+        }
     }
+
 }
 
 .column-text {
-    column-count: 2;
+    @include breakpoint(medium up) {
+        column-count: 2;
+    }
 }
 
 .text-upper{
@@ -64,12 +71,15 @@ h1 {
 }
 
 header{
-    margin-bottom: ($padding * 5);
+    margin-bottom: ($padding * 2);
+    @include breakpoint(medium up) {
+        margin-bottom: ($padding * 5);
+    }
     padding: $padding 0;
 }
 
 .logo{
-    padding:($padding * 2);
+    padding:($padding * 2) 0;
     text-align:center;
     display:inline-block;
     line-height:1;
