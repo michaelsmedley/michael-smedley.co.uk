@@ -24,6 +24,13 @@ module.exports = function(grunt) {
         }]
       }
     },
+    autoprefixer:{
+      dist:{
+        files:{
+          'www/assets/css/styles.css':'www/assets/css/styles.css'
+        }
+      }
+    },
     uglify: {
       angular: {
         files: {
@@ -47,7 +54,7 @@ module.exports = function(grunt) {
       },
       styles: {
         files: ['app/assets/scss/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass','autoprefixer']
       },
       uglify: {
         files: ['app/assets/js/app/*.js'],
@@ -61,6 +68,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('default', ['jshint','sass','uglify']);
 

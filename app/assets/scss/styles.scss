@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 @import "../../../node_modules/foundation-sites/scss/foundation";
+@import "../../../node_modules/modular-scale/modularscale";
 @import "vars";
 
 @include foundation-everything(true);
@@ -8,13 +9,74 @@ body {
     background: $bodybg;
     color: $bodycolor;
     font-family: $bodyfont;
+    font-weight: 300;
+}
+
+.fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+a{
+    color: $linkcolor;
+    font-weight: 500;
+    transition: color ease-in-out .2s;
+    &:hover {
+        color: darken($linkcolor,20%);
+    }
+    &.text-color{
+        color: $bodycolor;
+        &:hover {
+            color: $linkcolor;
+        }
+    }
+}
+
+.column-text {
+    column-count: 2;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.marginless{
+    margin: 0;
 }
 
 nav{
-    margin-bottom: 4rem;
+
+    li{
+        display: inline;
+        padding: 0 $padding;
+    }
 }
 
 h1 {
     font-family: $bodyfont;
-    font-weight: 700;
+    font-weight: 300;
+    font-size: ms(1.5);
+}
+
+header{
+    margin-bottom: ($padding * 5);
+    padding: $padding 0;
+}
+
+.logo{
+    padding:($padding * 2) $padding;
+    text-align:center;
+    display:inline-block;
+    line-height:1;
+    z-index:2;
+    position:relative
+}
+
+.circle{
+    border-radius: 100%;
 }

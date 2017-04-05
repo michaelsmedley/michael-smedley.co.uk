@@ -1,5 +1,23 @@
 /** colors */
 $bodybg: #ffffff;
-$bodycolor: #222222;
+$bodycolor: #1A1A1A;
+$linkcolor: #f54843;
 
-$bodyfont: "Open Sans", sans-serif;
+/**
+ * Fonts
+ */
+$bodyfont: "Roboto", sans-serif;
+
+/**
+ * sizes
+ */
+$fontsize: 1rem;
+$padding: 0.625rem;
+
+/**
+ * Modular Scale
+ */
+$modularscale: (
+  base: $fontsize,
+  ratio: 1.5
+);
