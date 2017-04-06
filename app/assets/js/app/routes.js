@@ -17,11 +17,10 @@ myApp.config(["$routeProvider","$locationProvider",function($routeProvider,$loca
      controller:'WorkController'    
     })
     .when('/contact/', {
-     controller:'ContactController'    
+     controller:'ContactController',
+     templateUrl: "app/components/contact/view.html"   
     })
     .otherwise({
       redirectTo:'/'
     });
-
-    $locationProvider.html5Mode(true);
 }]);
