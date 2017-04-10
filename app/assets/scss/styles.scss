@@ -30,8 +30,25 @@ a{
     color: $linkcolor;
     font-weight: 500;
     transition: color ease-in-out .2s;
+    position: relative;
+    display: inline-block;
+    &::after{
+        content: "";
+        border-bottom: 4px solid $linkcolor;
+        width:0;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        padding: $padding 0;
+        transition: width ease-in-out .2s;
+    }
     &:hover {
         color: darken($linkcolor,20%);
+
+        &::after{
+            width: 100%;
+        }
     }
     &.text-color{
         color: $bodycolor;
@@ -46,10 +63,17 @@ a{
 
     &:active, &:focus{
         color: $linkcolor;
-        border-bottom: 1px dotted $linkcolor;
+         &::after{
+            width: 100%;
+        }
         outline: none;
     }
 
+    &.no-underline {
+        &::after{
+            display: none;
+        }
+    }
 }
 
 .column-text {
