@@ -11,10 +11,12 @@ myApp.config(["$routeProvider","$locationProvider",function($routeProvider,$loca
      templateUrl: "app/components/about/view.html"
     })
     .when('/work', {
-     controller:'WorkController'    
+     controller:'WorkController',
+     templateUrl: "app/components/work/view.html"  
     })
-    .when('/work:slug', {
-     controller:'WorkController'    
+    .when('/work/:slug', {
+     controller:'WorkController',
+     templateUrl: "app/components/work/item.html"  
     })
     .when('/contact/', {
      controller:'ContactController',
