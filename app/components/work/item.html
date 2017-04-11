@@ -4,7 +4,14 @@
         <btf-markdown class="columns">
             <h1>{{workItem.title}}</h1>
 
+            <div class="row">
+                <div class="columns" ng-repeat="img in workItem.gallery">
+                    <p class="text-center"><img src="{{img}}" /></p>
+                </div>
+            </div>
+
             {{workItem.description}}
+
         </btf-markdown>
     </div>
 </div>

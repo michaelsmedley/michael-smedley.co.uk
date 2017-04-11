@@ -12,7 +12,7 @@ myApp.controller("WorkController", ["$scope", "$routeParams", "$rootScope","$htt
             $scope.workItems = response.data;
          });
      } else {
-        $http.get('https://api.michael-smedley.co.uk/work-item.json').then(function(response) {
+        $http.get('https://api.michael-smedley.co.uk/'+$scope.params.slug+'.json').then(function(response) {
             $scope.workItem = response.data;
          });
      }
