@@ -7,4 +7,5 @@ myApp.run(["$rootScope","$http","$location",function($rootScope,$http,$location)
     {"name":"Contact","link":"/#!/contact"}
     ];
     $rootScope.$location = $location;
+    $rootScope.currentPath = "/#!" + $location.path();
 }]);

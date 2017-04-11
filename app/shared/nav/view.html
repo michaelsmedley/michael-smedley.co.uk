@@ -16,7 +16,7 @@
     </div>
     <nav class="text-right hide-for-small-only columns medium-6">
     <ul class="marginless">   
-        <li ng-repeat="i in nav"><a href="{{i.link}}" class="text-color text-upper" ng-class="{active: $location.path() === i.link}">{{i.name}}</a></li>
+        <li ng-repeat="i in nav"><a href="{{i.link}}" class="text-color text-upper" ng-class="{active: currentPath === i.link}">{{i.name}}</a></li>
     </ul>
     </nav>
 </header>  

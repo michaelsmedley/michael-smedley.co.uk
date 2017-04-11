@@ -43,21 +43,27 @@ a{
         padding: $padding 0;
         transition: width ease-in-out .2s;
     }
-    &:hover {
-        color: darken($linkcolor,20%);
+        &:hover {
+            color: darken($linkcolor,20%);
 
-        &::after{
-            width: 100%;
+        @include breakpoint(large up) {
+            &::after{
+                width: 100%;
+            }
         }
     }
     &.text-color{
         color: $bodycolor;
-        &:hover {
-            color: $linkcolor;
+        @include breakpoint(medium up) {
+            &:hover {
+                color: $linkcolor;
+            }
         }
-
         &.active {
             color: $linkcolor;
+            &::after{
+                width: 100%;
+            }
         }
     }
 
@@ -77,7 +83,7 @@ a{
 }
 
 .column-text {
-    @include breakpoint(medium up) {
+    @include breakpoint(large up) {
         column-count: 2;
     }
 }
