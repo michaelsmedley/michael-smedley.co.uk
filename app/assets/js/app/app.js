@@ -1,6 +1,6 @@
 var myApp = angular.module('_michaelsmedleycouk',['ngRoute','ngAnimate','afkl.lazyImage']);
 
-myApp.run(["$rootScope","$http","$location",function($rootScope,$http,$location) {
+myApp.run(["$rootScope","$http","$location","$routeParams",function($rootScope,$http,$location,$routeParams) {
     $rootScope.nav = [
     {"name":"About","link":"/#!/about"},
     {"name":"Work","link":"/#!/work"},
@@ -8,4 +8,8 @@ myApp.run(["$rootScope","$http","$location",function($rootScope,$http,$location)
     ];
     $rootScope.$location = $location;
     $rootScope.currentPath = "/#!" + $location.path();
+
+    $rootScope.$on("$routeChangeSuccess",function(ev, next,current) {
+        $rootScope.currentPath = "/#!" + next.originalPath;
+    });
 }]);
