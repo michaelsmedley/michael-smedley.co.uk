@@ -9,6 +9,7 @@
   "devDependencies": {
     "angular": "^1.6.4",
     "angular-animate": "^1.6.4",
+    "angular-lazy-image": "^0.3.4",
     "angular-markdown-directive": "^0.3.1",
     "angular-route": "^1.6.4",
     "angular-sanitize": "^1.6.4",
