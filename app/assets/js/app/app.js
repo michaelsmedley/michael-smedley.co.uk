@@ -1,4 +1,4 @@
-var myApp = angular.module('_michaelsmedleycouk',['ngRoute','ngAnimate']);
+var myApp = angular.module('_michaelsmedleycouk',['ngRoute','ngAnimate','afkl.lazyImage']);
 
 myApp.run(["$rootScope","$http","$location",function($rootScope,$http,$location) {
     $rootScope.nav = [

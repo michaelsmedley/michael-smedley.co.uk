@@ -2,7 +2,7 @@
     <div class="row collapse">
 
         <div ng-repeat="item in workItems" class="columns small-12 medium-4">
-            <a href="/#!/work/{{item.slug}}" class="no-underline"><img src="{{item.thumb}}" /></a>
+            <a href="/#!/work/{{item.slug}}" class="no-underline"><div afkl-lazy-image="{{item.thumb}}" class="afkl-lazy-wrapper afkl-img-ratio-1-1"></div></a>
         </div>
     </div>
 </div>

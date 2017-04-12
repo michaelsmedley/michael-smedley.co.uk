@@ -2,7 +2,7 @@
   "name": "michael-smedley.co.uk",
   "version": "1.0.0",
   "description": "My new portfolio design",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "angular": "^1.6.4"
   },

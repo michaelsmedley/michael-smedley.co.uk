@@ -38,9 +38,7 @@ module.exports = function(grunt) {
           'node_modules/angular/angular.min.js',
           'node_modules/angular-animate/angular-animate.min.js',
           'node_modules/angular-route/angular-route.min.js',
-          'node_modules/angular-sanitize/angular-sanitize.min.js',
-          'node_modules/showdown/dist/showdown.min.js',
-          'node_modules/angular-markdown-directive/markdown.js',
+          'node_modules/angular-lazy-image/dist/lazy-image.min.js',
           ]
         }
       },
