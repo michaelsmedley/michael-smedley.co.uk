@@ -18,7 +18,7 @@ myApp.config(["$routeProvider","$locationProvider",function($routeProvider,$loca
      controller:'WorkController',
      templateUrl: "app/components/work/item.html"  
     })
-    .when('/contact/', {
+    .when('/contact', {
      controller:'ContactController',
      templateUrl: "app/components/contact/view.html"   
     })

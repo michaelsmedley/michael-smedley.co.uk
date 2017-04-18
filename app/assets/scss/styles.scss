@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 @import "../../../node_modules/foundation-sites/scss/foundation";
-@import "../../../node_modules/modular-scale/modularscale";
+@import "../../../node_modules/modular-scale/stylesheets/modularscale";
 @import "vars";
+@import "plugins";
 
 @include foundation-everything(true);
 
