@@ -10,6 +10,11 @@ myApp.run(["$rootScope","$http","$location","$routeParams",function($rootScope,$
     $rootScope.currentPath = "/#!" + $location.path();
 
     $rootScope.$on("$routeChangeSuccess",function(ev, next,current) {
-        $rootScope.currentPath = "/#!" + next.originalPath;
+
+        if(next.originalPath.indexOf("work") > 0) {
+            $rootScope.currentPath = "/#!/work";
+        } else {
+            $rootScope.currentPath = "/#!" + next.originalPath;
+        }
     });
 }]);
