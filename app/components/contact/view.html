@@ -8,11 +8,8 @@
 
         <div class="column-text columns small-12 medium-6">
             <ul>
-                <li><a href="https://twitter.com/smdly" target="_blank" rel="noopener">Twitter</a></li>
-                <li><a href="https://www.instagram.com/mikesmedley/" target="_blank" rel="noopener">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/smdly/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://medium.com/@smdly/" target="_blank" rel="noopener">Medium</a></li>
-                <li><a href="https://codepen.io/smdly/" target="_blank" rel="noopener">CodePen</a></li>
+                <li ng-repeat="link in links"><a href="{{link.link}}" target="_blank" rel="noopener">{{link.label}}</a></li>
+                
             </ul>
         </div>
     </div>
