@@ -5,7 +5,7 @@ myApp.directive('lazyImage', function() {
     },
     controller: ["$scope",function($scope) {
         $scope.src = $scope.src;
-    }]
+    }],
     templateUrl: 'app/shared/lazyImage/view.html'
   };
 })
