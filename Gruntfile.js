@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['app/assets/js/*/*.js','app/components/*/*.js'],
+      files: ["app/assets/js/*/*.js","app/components/*/*.js"],
       options: {
         globals: {
           jQuery: true,
@@ -17,60 +17,60 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'app/assets/scss/',
-          src: ['*.scss'],
-          dest: 'www/assets/css/',
-          ext: '.css'
+          cwd: "app/assets/scss/",
+          src: ["*.scss"],
+          dest: "www/assets/css/",
+          ext: ".css"
         }]
       }
     },
     autoprefixer:{
       dist:{
         files:{
-          'www/assets/css/styles.css':'www/assets/css/styles.css'
+          "www/assets/css/styles.css":"www/assets/css/styles.css"
         }
       }
     },
     uglify: {
       angular: {
         files: {
-          'www/assets/js/angular.min.js': [
-          'node_modules/angular/angular.min.js',
-          'node_modules/angular-animate/angular-animate.min.js',
-          'node_modules/angular-route/angular-route.min.js',
-          'node_modules/angular-lazy-image/dist/lazy-image.min.js',
+          "www/assets/js/angular.min.js": [
+          "node_modules/angular/angular.min.js",
+          "node_modules/angular-animate/angular-animate.min.js",
+          "node_modules/angular-route/angular-route.min.js",
+          "node_modules/angular-lazy-image/dist/lazy-image.min.js",
           ]
         }
       },
       app: {
         files: {
-          'www/assets/js/app.min.js': ['app/assets/js/app/*.js', 'app/components/*/*.js', 'app/shared/*/*.js']
+          "www/assets/js/app.min.js": ["app/assets/js/app/*.js", "app/components/*/*.js", "app/shared/*/*.js"]
         }
       }
     },
     watch: {
       scripts: {
-        files: ['<%= jshint.files %>'],
-        tasks: ['jshint']
+        files: ["<%= jshint.files %>"],
+        tasks: ["jshint"]
       },
       styles: {
-        files: ['app/assets/scss/*.scss'],
-        tasks: ['sass','autoprefixer']
+        files: ["app/assets/scss/*.scss"],
+        tasks: ["sass","autoprefixer"]
       },
       uglify: {
-        files: ['app/assets/js/app/*.js'],
-        tasks: ['uglify']
+        files: ["app/assets/js/app/*.js"],
+        tasks: ["uglify"]
       }
 
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-sass");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-autoprefixer");
 
-  grunt.registerTask('default', ['jshint','sass','uglify']);
+  grunt.registerTask("default", ["jshint","sass","uglify"]);
 
 };

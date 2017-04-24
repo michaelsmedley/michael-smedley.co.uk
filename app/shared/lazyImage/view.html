@@ -1,1 +1,3 @@
-<img src="{{src}}" />
+<picture>
+    <source ng-repeat="(mq, file) in src" srcset="{{file}}" media="(min-width: {{mq}})" />
+</picture>
