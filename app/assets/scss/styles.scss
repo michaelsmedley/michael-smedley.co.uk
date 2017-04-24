@@ -102,6 +102,16 @@ a{
     margin: 0;
 }
 
+.listless{
+    list-style-type:none;
+    margin-left: 0;
+}
+
+.tool-list{
+    color: $linkcolor;
+    border-bottom: 1px solid $linkcolor;
+}
+
 nav{
 
     li{
