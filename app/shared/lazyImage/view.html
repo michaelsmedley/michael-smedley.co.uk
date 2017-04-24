@@ -1,4 +1,4 @@
 <picture>
-    <source ng-repeat="i in src" srcset="{{i.src}}" media="(min-width: {{i.size}})" />
+    <source ng-repeat="i in src track by $index" srcset="{{i.src}}" media="(min-width: {{i.size}})" />
 </picture>
 {{src}}
