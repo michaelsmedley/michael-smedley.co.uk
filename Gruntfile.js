@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ["app/assets/js/*/*.js","app/components/*/*.js"],
       options: {
+        reporterOutput: "",
         globals: {
           jQuery: true,
           esversion: 6
