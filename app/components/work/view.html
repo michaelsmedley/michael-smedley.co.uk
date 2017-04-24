@@ -1,6 +1,7 @@
 <div class="row">
 
-    <div ng-repeat="item in workItems" class="columns small-12 medium-4">
-        <a href="/#!/work/{{item.slug}}" class="no-underline work-item"><div afkl-lazy-image="//placehold.it/480x480 480w, //placehold.it/768x768 768w, //placehold.it/936x936" class="afkl-lazy-wrapper afkl-img-ratio-1-1"></div></a>
+    <div ng-repeat="item in workItems" class="columns small-12 medium-6">
+        <a href="/#!/work/{{item.slug}}" class="no-underline work-item">
+            <lazy-image src="//placehold.it/480x480 480w, //placehold.it/768x768 768w, //placehold.it/936x936"></lazy-image></a>
     </div>
 </div>
