@@ -108,8 +108,10 @@ a{
 }
 
 .tool-list{
-    color: $linkcolor;
-    border-bottom: 1px solid $linkcolor;
+    li{
+        color: $linkcolor;
+        border-bottom: 1px solid $linkcolor;
+    }
 }
 
 nav{
