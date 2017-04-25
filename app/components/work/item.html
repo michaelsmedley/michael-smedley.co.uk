@@ -4,16 +4,21 @@
         <div class="columns">
             <h1 class="large-offset-2">{{workItem.title}}</h1>
 
-
+            <picture>
+                <source srcset="//placehold.it/960x480" media="(min-width: 64em)" />
+                <source srcset="//placehold.it/768x300" media="(min-width: 40em)" />
+                <source srcset="//placehold.it/480x480" media="(min-width: 39.9375em)" />
+                <img src="//placehold.it/480x480" />
+            </picture>
+            
             <div class="row">
+                <div class="columns small-12 large-10">
+                    {{workItem.description}}
+                </div>
                 <div class="columns large-2 hide-for-small">
-                <p><strong>Tools used</strong></p>
                     <ul class="listless tool-list">
                         <li ng-repeat="tool in workItem.tools">{{tool}}</li>
                     </ul>
-                </div>
-                <div class="columns small-12 large-10">
-                    {{workItem.description}}
                 </div>
             </div>
 
