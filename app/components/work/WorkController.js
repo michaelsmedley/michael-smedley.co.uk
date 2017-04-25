@@ -14,6 +14,7 @@ myApp.controller("WorkController", ["$scope", "$routeParams", "$rootScope","$htt
      } else {
         $http.get('https://api.michael-smedley.co.uk/'+$scope.params.slug+'.json').then(function(response) {
             $scope.workItem = response.data;
+            $scope.images = response.data.gallery;
          });
      }
 }]);
