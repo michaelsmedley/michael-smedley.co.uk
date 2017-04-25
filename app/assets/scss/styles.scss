@@ -196,15 +196,19 @@ header{
 
 .work-item{
     position: relative;
+    display: block;
     .overlay {
         opacity: 0;
         transition: opacity ease-in-out .3s;
         background: rgba(red($linkcolor),green($linkcolor),blue($linkcolor),0.75);
         color: $white;
-        position:fixed;
+        position:absolute;
         width: 100%;
         height: 100%;
         padding: $padding;
+        display: block;
+        top:0;
+        left:0;
     }
 
     &:hover{
