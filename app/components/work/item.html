@@ -7,7 +7,7 @@
 
             <hr />
 
-            <p><lazy-image src='{{images}}'></lazy-image></p>
+            <p ng-init="imagedata = images"><lazy-image src='{{imagedata}}'></lazy-image></p>
             {{images}}
             
             <div class="row">
