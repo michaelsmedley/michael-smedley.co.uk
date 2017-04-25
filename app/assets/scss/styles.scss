@@ -140,6 +140,10 @@ header{
     z-index:2;
     position:relative;
 
+    path {
+        transtion: color ease-in-out .3s;
+    }
+
     &:hover{
         path {
             fill: $linkcolor;
