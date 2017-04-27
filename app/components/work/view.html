@@ -1,12 +1,13 @@
 <div class="row">
 
     <div ng-repeat="item in workItems" class="columns small-12 medium-6">
-        <p><a href="/#!/work/{{item.slug}}" class="no-underline work-item intrinsic intrinsic--square">
-                <img src="{{item.thumb}}" alt="{{item.title}}" class="intrinsic-item" />
-                <span class="overlay">
-                    <h2>{{item.title}}</h2>
-                </span>
-            </a>
-        </p>
+        <div class=" work-item intrinsic intrinsic--square">
+        <a href="/#!/work/{{item.slug}}" class="no-underline">
+            <img src="{{item.thumb}}" alt="{{item.title}}" class="intrinsic-item" />
+        </a>
+            <span class="overlay">
+                <h2>{{item.title}}</h2>
+            </span>
+        </div>
     </div>
 </div>
