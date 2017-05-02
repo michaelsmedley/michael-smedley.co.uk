@@ -229,3 +229,19 @@ header{
         }
     }
 }
+
+.loader{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top:-3px;
+    animation: loadAnim 1s infinite;
+
+}
+
+@keyframes loadAnim {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
