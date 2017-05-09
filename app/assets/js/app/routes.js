@@ -23,6 +23,7 @@ myApp.config(["$routeProvider","$locationProvider",function($routeProvider,$loca
      templateUrl: "app/components/contact/view.html"   
     })
     .otherwise({
-      redirectTo:'/'
+      controller:'ErrorController',
+      templateUrl: "app/components/error/view.html"
     });
 }]);
