@@ -984,6 +984,12 @@ FileETag None
 # </IfModule>
 
 <IfModule mod_rewrite.c>
-  RewriteRule ^album/(\d+)*$ share.php?album=$1
-  RewriteRule ^suggest/$ suggest.html
+  Redirect 301 /work /#!/work/
+  Redirect 301 /work/ /#!/work/
+  Redirect 301 /contact /#!/contact/
+  Redirect 301 /contact/ /#!/contact/
+  Redirect 301 /about /#!/about/
+  Redirect 301 /about/ /#!/about/
+
+  RewriteRule ^/work/([^/]+)$ /work/#!/$1 [R=301,L]
 </IfModule>
